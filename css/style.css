@@ -1,0 +1,180 @@
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+}
+ul{
+  list-style-type: none;
+}
+a{
+  text-decoration: none;
+}
+body{
+  width:100%;
+  background-color: #eee;
+}
+.TodoContent{
+  margin: 100px auto;
+  width: 450px;
+  min-height: 400px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+  border-radius: 7px;
+
+}
+.TodoContent .taskInput{
+  width: 100%;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.TodoContent .taskInput input{
+  width: 80%;
+  padding: 10px;
+  outline: none;
+  font-size: 20px;
+  border: 2px solid #999999b2;
+
+  border-radius: 4px;
+
+}
+.TodoContent .taskInput .AddBtn{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:white;
+  margin: 0px !important;
+  padding: 0px !important;
+
+}
+.TodoContent .taskInput input::placeholder{
+  font-size: 20px;
+  color:#bfbfbf
+}
+.TodoContent .controls{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+}
+.TodoContent .controls .filters{
+  width:70%;
+}
+.TodoContent .controls .filters span{
+  width:75%;
+  margin: 0px 10px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.TodoContent .controls .filters span.active{
+  color:
+  rgb(29, 108, 236);
+}
+.TodoContent .controls .clearBtn{
+  letter-spacing: 1.2px;
+}
+.TodoContent .taskBox .task{
+  width: 100%;
+  display: flex;
+  /* align-items: center; */
+  justify-content:space-between;
+  margin: 20px 0px;
+}
+.TodoContent .taskBox .task label{
+  display: flex;
+  align-items: center;
+  /* justify-content:space-between; */
+  width:80%;
+}
+.TodoContent .taskBox .task label input{
+      margin-bottom: 12px;
+      width: 15px;
+      height: 15px;  
+}
+.TodoContent .taskBox .task label p{
+  margin-left: 15px;
+}
+.TodoContent .taskBox .task label p.checked{
+  text-decoration: line-through;
+}
+.TodoContent .taskBox .task .setting{
+  font-size: 20px;
+  cursor: pointer;
+  position: relative;
+  height: 0px;
+}
+.TodoContent .taskBox .task .setting .taskMenu{
+  position: absolute;
+  top:25px;
+  left:-81px;
+  min-width: 110px;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+  padding: 10px 5px;
+  border-radius: 5px;
+  transform: scale(0);
+  transition: all 0.5s ease;
+  z-index: 999;
+}
+.TodoContent .taskBox .task .setting .taskMenu.show{
+  transform: scale(1);
+
+}
+.TodoContent .taskBox .task .setting .taskMenu li:first-child{
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.TodoContent .taskBox .task .setting .taskMenu li{
+  padding: 2px;
+  transition: all 0.3s ease;
+}
+.TodoContent .taskBox .task .setting .taskMenu li:hover{
+  background-color: #eee;
+}
+.TodoContent .taskBox .task .setting .taskMenu li svg{
+margin-right: 10px;
+margin-left: 5px;
+}
+@media (max-width:786px){
+  .TodoContent{
+
+  width: 100%
+}
+}
+@media (max-width:400px){
+  .TodoContent .controls .filters span{
+    width:80%;
+    margin: 0px 5px;
+    font-size: 16px;
+  }
+}
+@media (max-width:300px){
+  .TodoContent .controls .filters span{
+    width:60%;
+    margin: 0px 5px;
+    font-size: 13px;
+  }
+  .TodoContent .taskInput input{
+    width: 70%;
+    padding: 6px;
+    font-size: 18px;
+  }
+  .TodoContent .taskInput .AddBtn{
+    width: 40px;
+    height: 40px;
+  }
+  .TodoContent .controls .clearBtn{
+    letter-spacing: 0px;
+    font-size: 13px !important;
+    padding: 8px 6px !important;
+  }
+}
